@@ -1,0 +1,372 @@
+/* ===== GLOBAL STYLES ===== */
+/* Style dasar untuk seluruh halaman */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif; /* Jenis font default */
+  margin: 0; /* Menghilangkan margin default */
+  padding: 0; /* Menghilangkan padding default */
+  background-image: url("../images/back1.jpg"); /* Gambar latar belakang */
+  background-size: cover; /* Gambar menutupi seluruh area */
+  background-position: center; /* Posisi gambar di tengah */
+  background-repeat: no-repeat; /* Gambar tidak diulang */
+  background-attachment: fixed; /* Gambar tetap saat discroll */
+  color: #333; /* Warna teks default */
+  line-height: 1.6; /* Jarak antar baris */
+}
+
+/* Container utama yang membungkus seluruh konten */
+#container {
+  width: 100%; /* Lebar penuh */
+  min-height: 100vh; /* Tinggi minimal viewport */
+  display: flex; /* Menggunakan flexbox */
+  flex-direction: column; /* Susunan vertikal */
+}
+
+/* ===== HEADER STYLES ===== */
+/* Style untuk header */
+#header {
+  width: 100%; /* Lebar penuh */
+  height: 200px; /* Tinggi tetap */
+  display: flex; /* Menggunakan flexbox */
+  align-items: center; /* Rata tengah vertikal */
+  justify-content: space-between; /* Jarak antar item */
+  position: relative; /* Posisi relatif untuk child absolute */
+}
+
+/* Style untuk logo */
+#logo {
+  position: absolute; /* Posisi absolut terhadap header */
+  top: 20px; /* Jarak dari atas */
+  left: 20px; /* Jarak dari kiri */
+  z-index: 2; /* Layer di atas elemen lain */
+  width: 120px; /* Lebar logo */
+}
+
+/* Style gambar logo */
+#logo img {
+  width: 100%; /* Lebar mengikuti parent */
+  height: auto; /* Tinggi menyesuaikan */
+}
+
+/* Style untuk slogan */
+#slogan {
+  width: 100%; /* Lebar penuh */
+  text-align: center; /* Teks rata tengah */
+  position: relative; /* Posisi relatif */
+  z-index: 1; /* Layer di bawah logo */
+}
+
+/* Style teks slogan */
+#slogan h1 {
+  font-size: 2.5rem; /* Ukuran font besar */
+  color: white; /* Warna teks putih */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Bayangan teks */
+  margin: 0; /* Tanpa margin */
+  padding: 20px; /* Padding di sekitar teks */
+}
+
+/* Style gambar latar slogan */
+.slogan-image {
+  position: absolute; /* Posisi absolut */
+  top: 0; /* Mulai dari atas */
+  left: 0; /* Mulai dari kiri */
+  width: 100%; /* Lebar penuh */
+  height: 100%; /* Tinggi penuh */
+  object-fit: cover; /* Gambar menutupi area */
+  z-index: -1; /* Layer di belakang */
+  opacity: 0.7; /* Sedikit transparan */
+}
+
+/* ===== NAVIGATION STYLES ===== */
+/* Style untuk navigasi */
+#nav {
+  padding: 15px 0; /* Padding atas bawah */
+}
+
+/* Style untuk list navigasi */
+#nav ul {
+  list-style: none; /* Menghilangkan bullet */
+  margin: 0; /* Tanpa margin */
+  padding: 0; /* Tanpa padding */
+  display: flex; /* Menggunakan flexbox */
+  justify-content: center; /* Rata tengah horizontal */
+  gap: 30px; /* Jarak antar item */
+}
+
+/* Style untuk item navigasi */
+#nav li {
+  margin: 0; /* Tanpa margin */
+}
+
+/* Style untuk link navigasi */
+#nav a {
+  color: white; /* Warna teks putih */
+  text-decoration: none; /* Tanpa underline */
+  font-weight: 600; /* Tebal */
+  font-size: 1.1rem; /* Ukuran font */
+  padding: 8px 15px; /* Padding dalam link */
+  border-radius: 4px; /* Sudut melengkung */
+  transition: all 0.3s ease; /* Animasi perubahan */
+}
+
+/* Style hover link navigasi */
+#nav a:hover {
+  background-color: #1abc9c; /* Warna latar saat hover */
+}
+
+/* ===== MAIN CONTENT LAYOUT ===== */
+/* Style untuk konten utama */
+#main-content {
+  display: flex; /* Menggunakan flexbox */
+  flex-wrap: wrap; /* Bisa wrap jika tidak cukup space */
+  padding: 20px; /* Padding di sekitar */
+  gap: 20px; /* Jarak antar item */
+}
+
+/* ARTICLE STYLES */
+/* Style untuk artikel */
+#article {
+  flex: 1; /* Mengisi sisa space */
+  min-width: 300px; /* Lebar minimal */
+  background-color: rgba(255, 255, 255, 0.9); /* Latar semi transparan */
+  border-radius: 8px; /* Sudut melengkung */
+  padding: 30px; /* Padding dalam */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan */
+}
+
+/* Style heading artikel */
+#article .content h2 {
+  color: #2c3e50; /* Warna teks */
+  font-size: 2rem; /* Ukuran font */
+  margin-bottom: 20px; /* Margin bawah */
+  padding-bottom: 10px; /* Padding bawah */
+  border-bottom: 2px solid #3498db; /* Garis bawah */
+}
+
+/* Style paragraf artikel */
+#article .content p {
+  color: #34495e; /* Warna teks */
+  font-size: 1.1rem; /* Ukuran font */
+  line-height: 1.8; /* Jarak antar baris */
+}
+
+/* SIDEBAR STYLES */
+/* Style untuk sidebar */
+#sidebar {
+  width: 250px; /* Lebar tetap */
+  background-color: rgba(244, 244, 244, 0.9); /* Latar semi transparan */
+  border-radius: 8px; /* Sudut melengkung */
+  padding: 20px; /* Padding dalam */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan */
+}
+
+/* Style heading sidebar */
+#sidebar h2 {
+  color: #2c3e50; /* Warna teks */
+  font-size: 1.5rem; /* Ukuran font */
+  margin-bottom: 20px; /* Margin bawah */
+}
+
+/* Style list navigasi sidebar */
+#sidebar nav ul {
+  list-style: none; /* Tanpa bullet */
+  padding: 0; /* Tanpa padding */
+  margin: 0; /* Tanpa margin */
+}
+
+/* Style item navigasi sidebar */
+#sidebar nav li {
+  margin-bottom: 10px; /* Margin bawah antar item */
+}
+
+/* Style link navigasi sidebar */
+#sidebar nav a {
+  display: block; /* Tampil sebagai blok */
+  padding: 10px 15px; /* Padding dalam */
+  background-color: rgba(255, 255, 255, 0.7); /* Latar semi transparan */
+  color: #2c3e50; /* Warna teks */
+  text-decoration: none; /* Tanpa underline */
+  border-radius: 4px; /* Sudut melengkung */
+  transition: all 0.3s ease; /* Animasi perubahan */
+}
+
+/* Style hover link sidebar */
+#sidebar nav a:hover {
+  background-color: #3498db; /* Warna latar saat hover */
+  color: white; /* Warna teks saat hover */
+}
+
+/* ===== FOOTER STYLES ===== */
+/* Style untuk footer */
+/* ===== FOOTER STYLES ===== */
+#footer {
+  background-color: rgba(255, 255, 255, 0.95); /* Putih hampir solid (95% opacity) */
+  color: #333; /* Warna teks gelap untuk kontras */
+  padding: 40px 20px;
+  margin-top: auto;
+  position: relative; /* Untuk pseudo-element */
+  z-index: 1; /* Pastikan footer di atas background */
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.05); /* Bayangan halus di atas */
+}
+
+/* Membuat efek foto background terlihat di bagian bawah footer */
+#footer::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px; /* Area dimana background akan terlihat */
+  background: linear-gradient(to top, rgba(0,0,0,0.1), transparent);
+  z-index: -1;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  padding: 15px;
+}
+
+.footer-section p {
+  color: #555; /* Warna teks lebih gelap */
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px; /* Perbaiki typo 'battom' menjadi 'bottom' */
+}
+
+.footer-section h3 {
+  color: #1abc9c;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #1abc9c;
+}
+
+.footer-section a {
+  color: #3498db; /* Tambahkan # sebelum kode warna */
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 5px 0;
+}
+
+.footer-section a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+  transform: translateX(5px);
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  background-color: #1abc9c;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-icon:hover {
+  background-color: #16a085;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+  color: #1abc9c;
+}
+
+/* ===== BACKGROUND ADJUSTMENT ===== */
+body {
+  background-image: url("../images/back1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+#main-content {
+  background-color: white; /* Konten utama putih solid */
+  border-radius: 8px;
+  margin: 20px;
+  box-shadow: 0 0 15px rgba(27, 151, 209, 0.1);
+  padding: 20px;
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+/* Style untuk layar <= 992px */
+@media (max-width: 992px) {
+  #main-content {
+    flex-direction: column; /* Susunan vertikal */
+  }
+  
+  #sidebar {
+    width: 100%; /* Lebar penuh */
+    order: -1; /* Pindah ke atas */
+  }
+}
+
+/* Style untuk layar <= 768px */
+@media (max-width: 768px) {
+  #header {
+    height: 150px; /* Tinggi lebih kecil */
+  }
+  
+  #slogan h1 {
+    font-size: 2rem; /* Ukuran font lebih kecil */
+  }
+  
+  #nav ul {
+    flex-direction: column; /* Susunan vertikal */
+    gap: 10px; /* Jarak lebih kecil */
+  }
+  
+  .footer-container {
+    flex-direction: column; /* Susunan vertikal */
+  }
+}
+
+/* Style untuk layar <= 480px */
+@media (max-width: 480px) {
+  #header {
+    height: 120px; /* Tinggi lebih kecil */
+  }
+  
+  #logo {
+    width: 80px; /* Ukuran logo lebih kecil */
+  }
+  
+  #slogan h1 {
+    font-size: 1.5rem; /* Ukuran font lebih kecil */
+  }
+  
+  #article .content h2 {
+    font-size: 1.5rem; /* Ukuran font lebih kecil */
+  }
+  
+  #article .content p {
+    font-size: 1rem; /* Ukuran font lebih kecil */
+  }
+}
